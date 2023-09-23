@@ -1,0 +1,8 @@
+F:\btcode\NGUYENTRUNGTIN_2122110033\BAI1_1\bin\Debug\BAI1_1.exe.config
+F:\btcode\NGUYENTRUNGTIN_2122110033\BAI1_1\bin\Debug\BAI1_1.exe
+F:\btcode\NGUYENTRUNGTIN_2122110033\BAI1_1\bin\Debug\BAI1_1.pdb
+F:\btcode\NGUYENTRUNGTIN_2122110033\BAI1_1\obj\Debug\BUOI1_1.csproj.AssemblyReference.cache
+F:\btcode\NGUYENTRUNGTIN_2122110033\BAI1_1\obj\Debug\BUOI1_1.csproj.SuggestedBindingRedirects.cache
+F:\btcode\NGUYENTRUNGTIN_2122110033\BAI1_1\obj\Debug\BUOI1_1.csproj.CoreCompileInputs.cache
+F:\btcode\NGUYENTRUNGTIN_2122110033\BAI1_1\obj\Debug\BAI1_1.exe
+F:\btcode\NGUYENTRUNGTIN_2122110033\BAI1_1\obj\Debug\BAI1_1.pdb
