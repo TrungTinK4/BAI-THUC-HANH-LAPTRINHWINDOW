@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{11C7CB1D-442E-4402-8A58-AD1C04F83849}</ProjectGuid>
+    <ProjectGuid>{EDC98B8B-DDB9-4B67-9386-44EE5E780B5B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BUOI2_1</RootNamespace>
-    <AssemblyName>BUOI2_1</AssemblyName>
+    <RootNamespace>BUOI2_2</RootNamespace>
+    <AssemblyName>BUOI2_2</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
