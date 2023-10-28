@@ -1,0 +1,3 @@
+F:\btcode\NGUYENTRUNGTIN_2122110033_LTWIN\BUOI2_2\obj\Debug\BUOI2_2.csproj.AssemblyReference.cache
+F:\btcode\NGUYENTRUNGTIN_2122110033_LTWIN\BUOI2_2\obj\Debug\BUOI2_2.csproj.SuggestedBindingRedirects.cache
+F:\btcode\NGUYENTRUNGTIN_2122110033_LTWIN\BUOI2_2\obj\Debug\BUOI2_2.csproj.CoreCompileInputs.cache

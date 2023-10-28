@@ -1,0 +1,5 @@
+F:\btcode\NGUYENTRUNGTIN_2122110033_LTWIN\BUOI5_1\obj\Debug\BUOI5_1.csproj.AssemblyReference.cache
+F:\btcode\NGUYENTRUNGTIN_2122110033_LTWIN\BUOI5_1\obj\Debug\BUOI5_1.csproj.SuggestedBindingRedirects.cache
+F:\btcode\NGUYENTRUNGTIN_2122110033_LTWIN\BUOI5_1\obj\Debug\BUOI5_1.Properties.Resources.resources
+F:\btcode\NGUYENTRUNGTIN_2122110033_LTWIN\BUOI5_1\obj\Debug\BUOI5_1.csproj.GenerateResource.cache
+F:\btcode\NGUYENTRUNGTIN_2122110033_LTWIN\BUOI5_1\obj\Debug\BUOI5_1.csproj.CoreCompileInputs.cache
