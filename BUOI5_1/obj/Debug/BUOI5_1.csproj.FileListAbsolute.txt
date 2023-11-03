@@ -1,5 +1,10 @@
-F:\btcode\NGUYENTRUNGTIN_2122110033_LTWIN\BUOI5_1\obj\Debug\BUOI5_1.csproj.AssemblyReference.cache
-F:\btcode\NGUYENTRUNGTIN_2122110033_LTWIN\BUOI5_1\obj\Debug\BUOI5_1.csproj.SuggestedBindingRedirects.cache
-F:\btcode\NGUYENTRUNGTIN_2122110033_LTWIN\BUOI5_1\obj\Debug\BUOI5_1.Properties.Resources.resources
-F:\btcode\NGUYENTRUNGTIN_2122110033_LTWIN\BUOI5_1\obj\Debug\BUOI5_1.csproj.GenerateResource.cache
-F:\btcode\NGUYENTRUNGTIN_2122110033_LTWIN\BUOI5_1\obj\Debug\BUOI5_1.csproj.CoreCompileInputs.cache
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi5_1\bin\Debug\Buoi5_1.exe.config
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi5_1\bin\Debug\Buoi5_1.exe
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi5_1\bin\Debug\Buoi5_1.pdb
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi5_1\obj\Debug\Buoi5_1.csproj.AssemblyReference.cache
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi5_1\obj\Debug\Buoi5_1.Form1.resources
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi5_1\obj\Debug\Buoi5_1.Properties.Resources.resources
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi5_1\obj\Debug\Buoi5_1.csproj.GenerateResource.cache
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi5_1\obj\Debug\Buoi5_1.csproj.CoreCompileInputs.cache
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi5_1\obj\Debug\Buoi5_1.exe
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi5_1\obj\Debug\Buoi5_1.pdb

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BUOI3_2.Properties
+namespace Buoi3_2.Properties
 {
 
 

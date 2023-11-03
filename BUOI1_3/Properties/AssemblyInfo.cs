@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BUOI1_3")]
+[assembly: AssemblyTitle("Buoi1_3")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BUOI1_3")]
+[assembly: AssemblyProduct("Buoi1_3")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6ca37491-b5cd-4962-9e62-08af4451d486")]
+[assembly: Guid("71e59a6a-8ea8-4c07-b2d9-b8dfe85f807a")]
 
 // Version information for an assembly consists of the following four values:
 //

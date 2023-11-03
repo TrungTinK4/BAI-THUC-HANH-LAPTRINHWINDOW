@@ -1,8 +1,7 @@
-F:\btcode\NGUYENTRUNGTIN_2122110033\BUOI1_7\obj\Debug\BUOI1_7.csproj.AssemblyReference.cache
-F:\btcode\NGUYENTRUNGTIN_2122110033\BUOI1_7\obj\Debug\BUOI1_7.csproj.SuggestedBindingRedirects.cache
-F:\btcode\NGUYENTRUNGTIN_2122110033\BUOI1_7\obj\Debug\BUOI1_7.csproj.CoreCompileInputs.cache
-F:\btcode\NGUYENTRUNGTIN_2122110033\BUOI1_7\bin\Debug\BUOI1_7.exe.config
-F:\btcode\NGUYENTRUNGTIN_2122110033\BUOI1_7\bin\Debug\BUOI1_7.exe
-F:\btcode\NGUYENTRUNGTIN_2122110033\BUOI1_7\bin\Debug\BUOI1_7.pdb
-F:\btcode\NGUYENTRUNGTIN_2122110033\BUOI1_7\obj\Debug\BUOI1_7.exe
-F:\btcode\NGUYENTRUNGTIN_2122110033\BUOI1_7\obj\Debug\BUOI1_7.pdb
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi1_7\bin\Debug\Buoi1_7.exe.config
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi1_7\bin\Debug\Buoi1_7.exe
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi1_7\bin\Debug\Buoi1_7.pdb
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi1_7\obj\Debug\Buoi1_7.csproj.AssemblyReference.cache
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi1_7\obj\Debug\Buoi1_7.csproj.CoreCompileInputs.cache
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi1_7\obj\Debug\Buoi1_7.exe
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi1_7\obj\Debug\Buoi1_7.pdb

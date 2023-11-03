@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BUOI3_1
+namespace Buoi3_1
 {
     public partial class Form1 : Form
     {
@@ -17,58 +17,22 @@ namespace BUOI3_1
             InitializeComponent();
         }
 
-        private void txtSoA_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                double a, b;
-                if (!double.TryParse(txtSoA.Text, out a))
-                {
-                    throw new Exception("Số A không được để trống hoặc phải số");
-                }
-                if (!double.TryParse(txtSoB.Text, out b))
-                {
-                    throw new Exception("Số B không được để trống hoặc phải số");
-                }
-                txtKetQua.Text = (a * b).ToString();
-            }
-            catch (Exception ex)
-            {
-                txtKetQua.Text = ex.Message;
-            }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCong_Click(object sender, EventArgs e)
         {
             try
             {
                 double a, b;
-                if (!double.TryParse(txtSoA.Text, out a))
+                if(!double.TryParse(txtSoA.Text,out a))
                 {
-                    throw new Exception("Số A không được để trống hoặc phải số");
+                    throw new Exception("Số a không được để trống hoặc phải là số");
                 }
                 if (!double.TryParse(txtSoB.Text, out b))
                 {
-                    throw new Exception("Số B không được để trống hoặc phải số");
+                    throw new Exception("Số B không được để trống hoặc phải là số");
                 }
                 txtKetQua.Text = (a + b).ToString();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 txtKetQua.Text = ex.Message;
             }
@@ -81,13 +45,55 @@ namespace BUOI3_1
                 double a, b;
                 if (!double.TryParse(txtSoA.Text, out a))
                 {
-                    throw new Exception("Số A không được để trống hoặc phải số");
+                    throw new Exception("Số a không được để trống hoặc phải là số");
                 }
                 if (!double.TryParse(txtSoB.Text, out b))
                 {
-                    throw new Exception("Số B không được để trống hoặc phải số");
+                    throw new Exception("Số B không được để trống hoặc phải là số");
                 }
-                txtKetQua.Text = (a -   b).ToString();
+                txtKetQua.Text = (a - b).ToString();
+            }
+            catch (Exception ex)
+            {
+                txtKetQua.Text = ex.Message;
+            }
+        }
+
+        private void btnNhan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double a, b;
+                if (!double.TryParse(txtSoA.Text, out a))
+                {
+                    throw new Exception("Số a không được để trống hoặc phải là số");
+                }
+                if (!double.TryParse(txtSoB.Text, out b))
+                {
+                    throw new Exception("Số B không được để trống hoặc phải là số");
+                }
+                txtKetQua.Text = (a * b).ToString();
+            }
+            catch (Exception ex)
+            {
+                txtKetQua.Text = ex.Message;
+            }
+        }
+
+        private void btnChia_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double a, b;
+                if (!double.TryParse(txtSoA.Text, out a))
+                {
+                    throw new Exception("Số a không được để trống hoặc phải là số");
+                }
+                if (!double.TryParse(txtSoB.Text, out b))
+                {
+                    throw new Exception("Số B không được để trống hoặc phải là số");
+                }
+                txtKetQua.Text = (a / b).ToString();
             }
             catch (Exception ex)
             {
@@ -100,35 +106,5 @@ namespace BUOI3_1
             Application.Exit();
         }
 
-        private void btnChia_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                double a, b;
-                if (!double.TryParse(txtSoA.Text, out a))
-                {
-                    throw new Exception("Số A không được để trống hoặc phải số");
-                }
-                if (!double.TryParse(txtSoB.Text, out b))
-                {
-                    throw new Exception("Số B không được để trống hoặc phải số");
-                }
-                txtKetQua.Text = (a  b).ToString();
-            }
-            catch (Exception ex)
-            {
-                txtKetQua.Text = ex.Message;
-            }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
-        
-
-       
-        
-        

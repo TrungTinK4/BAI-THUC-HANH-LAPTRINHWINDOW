@@ -4,60 +4,67 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace SinhVien
+namespace Buoi2_2
 {
-    class SinhVien
+    internal class SinhVien
     {
-        public string MaSV { get; set; }
-        public string HoTen { get; set; }
-        public double DiemTB { get; set; }
-        public string TenKhoa { get; set; }
-
-        public void NhapThongTin()
+        private string _MaSV;
+        private string _HoTen;
+        private double _DiemTB;
+        private string _Khoa;
+        public SinhVien() { }
+        public SinhVien(string masv, string hoten, double dtb, string khoa)
         {
-            Console.Write("Nhap ma sinh vien: ");
+            this.MaSV = masv;
+            this.HoTen = hoten;
+            this.DiemTB = dtb;
+            this.Khoa = khoa;
+        }
+        public SinhVien(SinhVien sv)
+        {
+            this.MaSV = sv._MaSV;
+            this.HoTen = sv._HoTen;
+            this.DiemTB = sv._DiemTB;
+            this.Khoa = sv._Khoa;
+        }
+        public string MaSV
+        {
+            get { return _MaSV; }
+            set { _MaSV = value; }
+        }
+
+        public string HoTen
+        {
+            get { return _HoTen; }
+            set { _HoTen = value; }
+        }
+
+        public double DiemTB
+        {
+            get { return _DiemTB; }
+            set { _DiemTB = value; }
+        }
+
+        public string Khoa
+        {
+            get { return _Khoa; }
+            set { _Khoa = value; }
+        }
+
+        public void NhapSV()
+        {
+            Console.Write("Nhap MaSV: ");
             MaSV = Console.ReadLine();
-            Console.Write("Nhap ho ten sinh vien: ");
+            Console.Write("Nhap HoTen: ");
             HoTen = Console.ReadLine();
-            Console.Write("Nhap diem trung binh: ");
+            Console.Write("Nhap DiemTB: ");
             DiemTB = double.Parse(Console.ReadLine());
-            Console.Write("Nhap ten khoa: ");
-            TenKhoa = Console.ReadLine();
+            Console.Write("Nhap Khoa: ");
+            Khoa = Console.ReadLine();
         }
-
-        public void XuatThongTin()
+        public void XuatSV()
         {
-            Console.WriteLine($"Ma sinh vien: {MaSV}");
-            Console.WriteLine($"Ho ten sinh vien: {HoTen}");
-            Console.WriteLine($"Diem trung binh: {DiemTB}");
-            Console.WriteLine($"Ten khoa: {TenKhoa}");
+            Console.WriteLine("MaSV:{0} \t HoTen:{1} \t DiemTB:{2} \t Khoa:{3}", MaSV, HoTen, DiemTB, Khoa);
         }
     }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.Write("Nhap tong so sinh vien: ");
-            int n = int.Parse(Console.ReadLine());
-
-            SinhVien[] arrSinhVien = new SinhVien[n];
-
-            for (int i = 0; i < n; i++)
-            {
-                arrSinhVien[i] = new SinhVien();
-                arrSinhVien[i].NhapThongTin();
-                Console.WriteLine();
-            }
-
-            for (int i = 0; i < n; i++)
-            {
-                arrSinhVien[i].XuatThongTin();
-                Console.WriteLine();
-            }
-        }
-    }
-}
-}
 }

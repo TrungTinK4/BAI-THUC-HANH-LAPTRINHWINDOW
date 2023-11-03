@@ -1,10 +1,19 @@
-﻿namespace BUOI4_1
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Buoi4_1
 {
     public partial class Form1 : Form
     {
-        string[] danhsachkhoa = { "CNTT", "QTKD", "Kế Toán", "Ngoại Ngữ" };
-        private int rowchoose;
-
+        int chon = -1;
+        String[] listKhoa = { "Công nghệ thông tin", "Kế toán", "Ngoại ngữ", "Điện tử" };
         public Form1()
         {
             InitializeComponent();
@@ -12,124 +21,91 @@
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dtpNgaySinh.MaxDate = DateTime.Now;
-            loadKhoa();
-        }
-        private void loadKhoa()
-        {
-            cbKhoa.DataSource = danhsachkhoa;
-            cbKhoa.SelectedItem = 0;
+            cbKhoa.DataSource = listKhoa;
+            lbSinhVien.Items.Add("Nguyễn Văn An");
+            lbSinhVien.Items.Add("Lê Văn Be");
+            lbSinhVien.Items.Add("Trần Văn Chính");
+            lbSinhVien.Items.Add("Mai Hữu Danh");
+            lbSinhVien.Items.Add("Hồ Văn En");
+            cbKhoa.SelectedIndex = 0;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtMaSV.Text.Length != 10)
+                if (txtHoTen.Text.Length.Equals(0))
                 {
-                    throw new Exception("Mã siinh viên phải đúng 10 ký tự");
+                    throw new Exception("Họ tên chưa nhập");
                 }
-                if (txtHoTen.Text.Length < 2)
-                {
-                    throw new Exception("Họ tên sinh viên ít nhất 2 ký tự");
-                }
-                string masv = txtMaSV.Text;
                 string hoten = txtHoTen.Text;
-                string ngaysinh = dtpNgaySinh.Text;
-                string khoa = cbKhoa.Text;
-                int rowindex = dgvDanhSach.Rows.Add();
-                dgvDanhSach.Rows[rowindex].Cells["MaSV"].Value = masv;
-                dgvDanhSach.Rows[rowindex].Cells["HoTen"].Value = hoten;
-                dgvDanhSach.Rows[rowindex].Cells["NgaySinh"].Value = ngaysinh;
-                dgvDanhSach.Rows[rowindex].Cells["Khoa"].Value = khoa;
+                lbSinhVien.Items.Add(hoten);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void dgvDanhSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnChonSV_Click(object sender, EventArgs e)
         {
-            try
+            if (chon != -1)
             {
-                if (e.RowIndex == -1 || e.RowIndex >= dgvDanhSach.Rows.Count - 1)
-                {
-                    throw new Exception("Chưa chọn sinh viên");
-                }
-                rowchoose = e.RowIndex;
-                txtMaSV.Text = dgvDanhSach.Rows[rowchoose].Cells["MaSV"].Value.ToString();
-                txtHoTen.Text = dgvDanhSach.Rows[rowchoose].Cells["HoTen"].Value.ToString();
-                dtpNgaySinh.Text = dgvDanhSach.Rows[rowchoose].Cells["NgaySinh"].Value.ToString();
-                cbKhoa.Text = dgvDanhSach.Rows[rowchoose].Cells["Khoa"].Value.ToString();
-                btnCapNhat.Enabled = true;
-                btnXoa.Enabled = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string hoten = lbSinhVien.SelectedItem.ToString();
+                string khoa = cbKhoa.SelectedItem.ToString();
+                ListViewItem item = new ListViewItem(hoten);
+                item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = khoa });
+                lvLop.Items.Add(item);
+                lbSinhVien.Items.RemoveAt(lbSinhVien.SelectedIndex);
+                chon = -1;
             }
         }
 
-        private void btnCapNhat_Click(object sender, EventArgs e)
+        private void btnThemAll_Click(object sender, EventArgs e)
         {
-            try
+            int count = lbSinhVien.Items.Count;
+            for (int vt = 0; vt < count; vt++)
             {
-                if (rowchoose == -1 || rowchoose >= dgvDanhSach.Rows.Count - 1)
-                {
-                    throw new Exception("Chưa chọn sinh viên cần cập nhập");
-                }
-                if (txtMaSV.Text.Length != 10)
-                {
-                    throw new Exception("Mã siinh viên phải đúng 10 ký tự");
-                }
-                if (txtHoTen.Text.Length < 2)
-                {
-                    throw new Exception("Họ tên sinh viên ít nhất 2 ký tự");
-                }
-                string masv = txtMaSV.Text;
-                string hoten = txtHoTen.Text;
-                string ngaysinh = dtpNgaySinh.Text;
-                string khoa = cbKhoa.Text;
-                int rowindex = dgvDanhSach.Rows.Add();
-                dgvDanhSach.Rows[rowindex].Cells["MaSV"].Value = masv;
-                dgvDanhSach.Rows[rowindex].Cells["HoTen"].Value = hoten;
-                dgvDanhSach.Rows[rowindex].Cells["NgaySinh"].Value = ngaysinh;
-                dgvDanhSach.Rows[rowindex].Cells["Khoa"].Value = khoa;
+                string khoa = cbKhoa.SelectedItem.ToString();
+                string hoten = lbSinhVien.Items[vt].ToString();
+                ListViewItem item = new ListViewItem(hoten);
+                item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = khoa });
+                lvLop.Items.Add(item);
             }
-            catch (Exception ex)
+            lbSinhVien.Items.Clear();
+        }
+
+        private void btnXoa1_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in lvLop.Items)
             {
-                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (item.Selected)
+                {
+                    lvLop.Items.Remove(item);
+                    lbSinhVien.Items.Add(item.Text);
+                }
             }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void btnXoaAll_Click(object sender, EventArgs e)
         {
-            try
+            foreach (ListViewItem item in lvLop.Items)
             {
-                if (rowchoose == -1 || rowchoose >= dgvDanhSach.Rows.Count - 1)
-                {
-                    throw new Exception("Chưa chọn sinh viên cần cập nhập");
-                }
-                dgvDanhSach.Rows.RemoveAt(rowchoose);
-                rowchoose = -1;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lvLop.Items.Remove(item);
+                lbSinhVien.Items.Add(item.Text);
             }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(
-                "Bạn có muốn thoát không",
-                "Thông báo",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            Application.Exit();
+        }
+
+        private void lbSinhVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbSinhVien.SelectedIndex != -1)
             {
-                Application.Exit();
+                chon = lbSinhVien.SelectedIndex;
             }
         }
     }

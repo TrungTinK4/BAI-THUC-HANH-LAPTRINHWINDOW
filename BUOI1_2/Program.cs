@@ -4,27 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BUOI1_2
-
+namespace Buoi1_2
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Nhap thang (1-12): ");
+            Console.Write("Nhap thang (1-12): ");
             int thang = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Nhap nam: ");
+            Console.Write("Nhap nam: ");
             int nam = int.Parse(Console.ReadLine());
 
             int soNgay = TinhSoNgayTrongThang(thang, nam);
-            Console.WriteLine($"So ngay trong thang {thang}/{nam} là: {soNgay}");
-            Console.ReadKey();
 
+            if (soNgay != -1)
+            {
+                Console.WriteLine($"So ngay trong thang {thang}/{nam} la: {soNgay} ngay.");
+            }
+            else
+            {
+                Console.WriteLine("Thang khong hop le.");
+            }
+            Console.ReadKey();
         }
 
-        static int BUOI1_2(int thang, int nam)
+        static bool CheckNamNhuan(int nam)
         {
+            return (nam % 4 == 0 && nam % 100 != 0) || (nam % 400 == 0);
+        }
+
+        static int TinhSoNgayTrongThang(int thang, int nam)
+        {
+            if (thang < 1 || thang > 12)
+            {
+                return -1; // Tháng không hợp lệ
+            }
+
             switch (thang)
             {
                 case 1:
@@ -43,15 +59,9 @@ namespace BUOI1_2
                 case 2:
                     return CheckNamNhuan(nam) ? 29 : 28;
                 default:
-                    return -1; 
+                    return -1; // Trường hợp không xảy ra
             }
         }
 
-        static bool CheckNamNhuan(int nam)
-        {
-            return (nam % 4 == 0 && nam % 100 != 0) || (nam % 400 == 0);
-        }
     }
 }
-
-       

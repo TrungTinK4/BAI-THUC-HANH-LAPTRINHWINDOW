@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BUOI3_2
+namespace Buoi3_2
 {
     internal static class Program
     {

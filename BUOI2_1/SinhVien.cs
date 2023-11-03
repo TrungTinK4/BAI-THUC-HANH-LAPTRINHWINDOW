@@ -4,60 +4,68 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace SinhVien
+namespace Buoi2_1
+{
+    internal class SinhVien
     {
-        class SinhVien
+        private string _MaSV;
+        private string _HoTen;
+        private double _DiemTB;
+        private string _Khoa;
+        public SinhVien() { }
+        public SinhVien(string masv, string hoten, double dtb, string khoa)
         {
-            public string MaSV { get; set; }
-            public string HoTen { get; set; }
-            public double DiemTB { get; set; }
-            public string TenKhoa { get; set; }
-
-            public void NhapThongTin()
-            {
-                Console.Write("Nhap ma sinh vien: ");
-                MaSV = Console.ReadLine();
-                Console.Write("Nhap ho ten sinh vien: ");
-                HoTen = Console.ReadLine();
-                Console.Write("Nhap diem trung binh: ");
-                DiemTB = double.Parse(Console.ReadLine());
-                Console.Write("Nhap ten khoa: ");
-                TenKhoa = Console.ReadLine();
-            }
-
-            public void XuatThongTin()
-            {
-                Console.WriteLine($"Ma sinh vien: {MaSV}");
-                Console.WriteLine($"Ho ten sinh vien: {HoTen}");
-                Console.WriteLine($"Diem trung binh: {DiemTB}");
-                Console.WriteLine($"Ten khoa: {TenKhoa}");
-            }
+            this.MaSV = masv;
+            this.HoTen = hoten;
+            this.DiemTB = dtb;
+            this.Khoa = khoa;
+        }
+        public SinhVien(SinhVien sv)
+        {
+            this.MaSV = sv._MaSV;
+            this.HoTen = sv._HoTen;
+            this.DiemTB = sv._DiemTB;
+            this.Khoa = sv._Khoa;
+        }
+        public string MaSV
+        {
+            get { return _MaSV; }
+            set { _MaSV = value; }
         }
 
-        class Program
+        public string HoTen
         {
-            static void Main(string[] args)
-            {
-                Console.Write("Nhap tong so sinh vien: ");
-                int n = int.Parse(Console.ReadLine());
+            get { return _HoTen; }
+            set { _HoTen = value; }
+        }
 
-                SinhVien[] arrSinhVien = new SinhVien[n];
+        public double DiemTB
+        {
+            get { return _DiemTB; }
+            set { _DiemTB = value; }
+        }
 
-                for (int i = 0; i < n; i++)
-                {
-                    arrSinhVien[i] = new SinhVien();
-                    arrSinhVien[i].NhapThongTin();
-                    Console.WriteLine();
-                }
+        public string Khoa
+        {
+            get { return _Khoa; }
+            set { _Khoa = value; }
+        }
 
-                for (int i = 0; i < n; i++)
-                {
-                    arrSinhVien[i].XuatThongTin();
-                    Console.WriteLine();
-                }
-            }
+        public void NhapSV()
+        {
+            Console.Write("Nhap MaSV: ");
+            MaSV = Console.ReadLine();
+            Console.Write("Nhap HoTen: ");
+            HoTen = Console.ReadLine();
+            Console.Write("Nhap DiemTB: ");
+            DiemTB = double.Parse(Console.ReadLine());
+            Console.Write("Nhap Khoa: ");
+            Khoa = Console.ReadLine();
+        }
+        public void XuatSV()
+        {
+            Console.WriteLine("MaSV:{0} \t HoTen:{1} \t DiemTB:{2} \t Khoa:{3}", MaSV, HoTen, DiemTB, Khoa);
         }
     }
-}
+
 }

@@ -1,3 +1,0 @@
-F:\btcode\NGUYENTRUNGTIN_2122110033\BAI1_1\obj\Debug\BAI1_1.csproj.AssemblyReference.cache
-F:\btcode\NGUYENTRUNGTIN_2122110033\BAI1_1\obj\Debug\BAI1_1.csproj.SuggestedBindingRedirects.cache
-F:\btcode\NGUYENTRUNGTIN_2122110033\BAI1_1\obj\Debug\BAI1_1.csproj.CoreCompileInputs.cache

@@ -1,0 +1,10 @@
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi3_baitapvenha\bin\Debug\Buoi3_baitapvenha.exe.config
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi3_baitapvenha\bin\Debug\Buoi3_baitapvenha.exe
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi3_baitapvenha\bin\Debug\Buoi3_baitapvenha.pdb
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi3_baitapvenha\obj\Debug\Buoi3_baitapvenha.csproj.AssemblyReference.cache
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi3_baitapvenha\obj\Debug\Buoi3_baitapvenha.Form1.resources
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi3_baitapvenha\obj\Debug\Buoi3_baitapvenha.Properties.Resources.resources
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi3_baitapvenha\obj\Debug\Buoi3_baitapvenha.csproj.GenerateResource.cache
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi3_baitapvenha\obj\Debug\Buoi3_baitapvenha.csproj.CoreCompileInputs.cache
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi3_baitapvenha\obj\Debug\Buoi3_baitapvenha.exe
+D:\C#\project\baitap\NguyenQuocTrong_2121110138\Buoi3_baitapvenha\obj\Debug\Buoi3_baitapvenha.pdb

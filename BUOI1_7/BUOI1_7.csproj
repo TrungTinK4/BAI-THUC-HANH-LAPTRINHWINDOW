@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{13785BF3-D748-4826-910D-9982AF8875F5}</ProjectGuid>
+    <ProjectGuid>{F44B5AF0-AAA8-42AD-999F-E8965FAB2400}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BUOI1_7</RootNamespace>
-    <AssemblyName>BUOI1_7</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RootNamespace>Buoi1_7</RootNamespace>
+    <AssemblyName>Buoi1_7</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>

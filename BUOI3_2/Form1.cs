@@ -5,80 +5,76 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BUOI3_2
+namespace Buoi3_2
 {
+   
     public partial class Form1 : Form
     {
-        private int stt;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
+        string listSV = "";
+        int stt = 1;
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnThem_TextChanged(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtHoTen.Text.Length.Equals(0))
+                if(txtHoTen.Text.Length.Equals(0))
                 {
-                    throw new Exception("H9 ten sinh vien kh8ng de rOng");
+                    throw new Exception("Họ tên sinh viên không được để trống");
                 }
                 string hoten = txtHoTen.Text;
-                string masv = mtxtMaSV.Text;
-                string ngaysinh = mtxtNgaySinh.Text;
-                string gioitinh =   "Nam";
+                string masv = txtMaSV.Text;
+                string ngaysinh = txtNgaySinh.Text;
+                string gioitinh = rdNam.Checked ? "Nam" : "Nữ";
                 string sothich = null;
-                if (chbDuLich.Checked)
+                if(cbTheThao.Checked)
                 {
-                    sothich += "Du Lich";
+                    sothich += "Thể thao";
                 }
-                if (chbTheThao.Checked)
+                if (cbDuLich.Checked)
                 {
-                    sothich += "The Thao";
+                    sothich += "Du lịch";
                 }
-                if (chbMuaSam.Checked)
+                if (cbMuaSam.Checked)
                 {
-                    sothich += "Mua Sam";
+                    sothich += "Mua sắm";
                 }
-                if (sothich != null)
-                {
-                    sothich = " Sd thich: " + sothich;
-                }
-                txtDanhSach.Text += stt + ". Họ tên: " + hoten + " Ngày sinh: " + ngaysinh + " Giới tính: " + gioitinh + sothich + "\r\n";
-                stt++;
+                stt += 1;
+                listSV += stt.ToString() + ". Họ tên: " + hoten + " Ngày sinh: " + ngaysinh + " Giới tính: " + gioitinh + " Sở thích: " + sothich + "\r\n";
+                txtDS.Text = listSV;
+                txtHoTen.Text = null;
+                txtMaSV.Text = null;
+                txtNgaySinh.Text = null;
+                cbDuLich.Checked = false;
+                cbMuaSam.Checked = false;
+                cbTheThao.Checked = false;
+                lblThongBao.Text = null;
             }
             catch (Exception ex)
             {
-                lblTBB.Text = ex.Message;
+                lblThongBao.Text = ex.Message;
             }
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            txtDanhSach.Text = "";
+            
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            txtDS.Text = null;
+            listSV = null;
         }
     }
 }

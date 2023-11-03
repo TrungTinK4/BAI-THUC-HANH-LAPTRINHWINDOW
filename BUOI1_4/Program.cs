@@ -4,60 +4,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BUOI1_4
+namespace Buoi1_4
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-          
-                Console.WriteLine("Nhap ba so nguyen a, b, c:");
-                int a, b, c;
+            Console.Write("Nhap do dai canh a: ");
+            int a = int.Parse(Console.ReadLine());
 
-                // Nhập giá trị a, b và c từ người dùng
-                Console.Write("Nhap a: ");
-                while (!int.TryParse(Console.ReadLine(), out a) || a <= 0)
-                {
-                    Console.Write("Vui long nhap lai a (so nguyen duong): ");
-                }
+            Console.Write("Nhap do dai canh b: ");
+            int b = int.Parse(Console.ReadLine());
 
-                Console.Write("Nhap b: ");
-                while (!int.TryParse(Console.ReadLine(), out b) || b <= 0)
-                {
-                    Console.Write("Vui long nhap lai b (so nguyen duong): ");
-                }
+            Console.Write("Nhap do dai canh c: ");
+            int c = int.Parse(Console.ReadLine());
 
-                Console.Write("Nhap c: ");
-                while (!int.TryParse(Console.ReadLine(), out c) || c <= 0)
-                {
-                    Console.Write("Vui long nhap lai c (so nguyen duong): ");
-                }
-
-                // Kiểm tra xem ba số a, b, c có phải là ba cạnh của tam giác không
-                if (IsTriangle(a, b, c))
-                {
-                    double p = (a + b + c) / 2.0; // Tính nửa chu vi
-                    double area = Math.Sqrt(p * (p - a) * (p - b) * (p - c)); // Tính diện tích
-
-                    Console.WriteLine($"Ba so {a}, {b}, {c} la ba canh caa mot tam giac.");
-                    Console.WriteLine($"Chu vi caa tam giac la: {2 * p}");
-                    Console.WriteLine($"Dien tich caa tam giac la: {area}");
-                Console.ReadKey();
-
-            }
-                else
-                {
-                    Console.WriteLine($"Ba so {a}, {b}, {c} khong the tao thanh mot tam giac.");
-                Console.ReadKey();
-            }
-            }
-
-            // Hàm kiểm tra ba số nguyên có phải là ba cạnh của tam giác
-            static bool IsTriangle(int a, int b, int c)
+            if (LaTamGiac(a, b, c))
             {
-                return a + b > c && a + c > b && b + c > a;
+                double chuVi = TinhChuVi(a, b, c);
+                double dienTich = TinhDienTich(a, b, c);
+
+                Console.WriteLine($"Ba so {a}, {b}, và {c} la do dai ba canh cua mot tam giac.");
+                Console.WriteLine($"Chu vi cua tam giac la: {chuVi}");
+                Console.WriteLine($"Dien tich cua tam giac la: {dienTich}");
             }
+            else
+            {
+                Console.WriteLine($"Ba so {a}, {b}, va {c} khong phai la do dai ban canh cua mot tam giac.");
+            }
+            Console.ReadKey();
         }
 
-    }
+        static bool LaTamGiac(int a, int b, int c)
+        {
+            return a + b > c && a + c > b && b + c > a;
+        }
 
+        static double TinhChuVi(int a, int b, int c)
+        {
+            return a + b + c;
+        }
+
+        static double TinhDienTich(int a, int b, int c)
+        {
+            double p = TinhChuVi(a, b, c) / 2;
+            return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+        }
+    }
+}
