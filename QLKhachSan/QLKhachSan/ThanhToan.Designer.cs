@@ -1,6 +1,7 @@
 ﻿
 namespace QLKhachSan
 {
+
     partial class frmThanhToan
     {
         /// <summary>
